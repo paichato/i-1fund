@@ -25,12 +25,10 @@ const Home = () => {
         placeholderTextColor="#555"
         style={styles.input}
       />
-      <ButtonAdd/>
+      <ButtonAdd action={handleNewAddNewSkill} />
       <Text style={[styles.title, { marginVertical: 50 }]}>My Skills</Text>
       {mySkills.map((skill) => (
-        <TouchableOpacity key={skill} style={styles.buttonSkill}>
-          <Text style={styles.textSkill}>{skill}</Text>
-        </TouchableOpacity>
+        <SkillCard skill={skill} />
       ))}
     </View>
   );
@@ -60,18 +58,5 @@ const styles = StyleSheet.create({
     borderRadius: 7,
   },
   
-  buttonSkill: {
-    backgroundColor: "#1f1e25",
-    padding: 15,
-    borderRadius: 50,
-    alignItems: "center",
-    marginVertical:10,
-  },
-  textSkill: {
-    color: "fff",
-    backgroundColor: "#1f1e25",
-    padding: 20,
-    fontSize: 18,
-    fontWeight: "bold",
-  },
+  
 });
