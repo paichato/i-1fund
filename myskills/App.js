@@ -63,10 +63,10 @@ import Home from './src/pages/home';
   };
 
   return (
-    <SafeAreaView style={backgroundStyle}>
+    <>
       <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
       <Home/>
-    </SafeAreaView>
+    </>
   );
 };
 
