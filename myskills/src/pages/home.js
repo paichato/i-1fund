@@ -31,12 +31,13 @@ const Home = () => {
     <View style={styles.container}>
        
       <Text style={styles.title}>Welcome Marlon</Text>
-      <Text style={style.greeting} >{greeting}</Text>
+      <Text style={styles.greeting} >{greeting}</Text>
       <TextInput
         placeholder="New Skill"
         placeholderTextColor="#555"
         style={styles.input}
         onChangeText={setNewSkill}
+        value={newSkill}
       />
       <ButtonAdd action={handleNewAddNewSkill} />
       <Text style={[styles.title, { marginVertical: 50 }]}>My Skills</Text>
@@ -62,8 +63,8 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
   },
   input: {
-    backgroundColor: "1f1e25",
-    color: "fff",
+    backgroundColor: "#1f1e25",
+    color: "#fff",
     fontSize: 18,
     padding: 15,
     marginTop: 30,

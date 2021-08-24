@@ -4,7 +4,7 @@ import { View, Text, TouchableOpacity, StyleSheet } from 'react-native'
 export default function ButtonAdd({action}) {
     return (
         <TouchableOpacity
-        onPress={handleNewAddNewSkill}
+        onPress={action}
         activeOpacity={0.7}
         style={styles.button}
       >
@@ -22,7 +22,7 @@ const styles=StyleSheet.create({
         marginTop: 20,
       },
       buttonText: {
-        color: "fff",
+        color: "#fff",
         fontSize: 17,
         fontWeight: "bold",
       },
