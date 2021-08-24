@@ -17,7 +17,7 @@ import {
   useColorScheme,
   View,
 } from 'react-native';
-//sdas
+//sdasadas
 import {
   Colors,
   DebugInstructions,
