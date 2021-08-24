@@ -25,6 +25,7 @@ const Home = () => {
         placeholder="New Skill"
         placeholderTextColor="#555"
         style={styles.input}
+        onChangeText={txt=>setNewSkill(txt)}
       />
       <ButtonAdd action={handleNewAddNewSkill} />
       <Text style={[styles.title, { marginVertical: 50 }]}>My Skills</Text>
