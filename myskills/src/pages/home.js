@@ -32,7 +32,7 @@ const Home = () => {
       </TouchableOpacity>
       <Text style={[styles.title, { marginVertical: 50 }]}>My Skills</Text>
       {mySkills.map((skill) => (
-        <TouchableOpacity style={styles.buttonSkill}>
+        <TouchableOpacity key={skill} style={styles.buttonSkill}>
           <Text style={styles.textSkill}>{skill}</Text>
         </TouchableOpacity>
       ))}
@@ -80,6 +80,7 @@ const styles = StyleSheet.create({
     padding: 15,
     borderRadius: 50,
     alignItems: "center",
+    marginVertical:10,
   },
   textSkill: {
     color: "fff",
