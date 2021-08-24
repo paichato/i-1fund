@@ -11,13 +11,26 @@ import {
 import ButtonAdd from "../components/button";
 import SkillCard from "../components/skillCard";
 
+interface SkillData{
+  id:string,
+  name:string
+}
+
 
 const Home = () => {
   const [newSkill, setNewSkill] = useState("");
-  const [mySkills, setMySkills] = useState([]);
-  const [greeting, setGreeting] = useState('')
+  const [mySkills, setMySkills] = useState<SkillData[]>([]);
+  const [greeting, setGreeting] = useState('');
+
+
 
   const handleNewAddNewSkill = () => {
+
+    const data={
+      id:String(new Date().getTime()),
+      name: newSkill
+    }
+
     setMySkills((oldSkills) => [...oldSkills, newSkill]);
   };
 
