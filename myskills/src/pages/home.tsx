@@ -35,6 +35,10 @@ const Home = () => {
     setMySkills((oldSkills) => [...oldSkills, data]);
   };
 
+  const handleremoveSkill=(id:string)=>{
+setMySkills(prevState=>prevState.filter(skill=>skill.id !== id))
+  }
+
   useEffect(()=>{
     const currentHour=new Date().getHours();
 
@@ -58,7 +62,7 @@ const Home = () => {
       <ButtonAdd title='Add' onPress={handleNewAddNewSkill} />
       <Text style={[styles.title, { marginVertical: 50 }]}>My Skills</Text>
       
-      <FlatList showsVerticalScrollIndicator={false} data={mySkills} renderItem={({item})=><SkillCard  skill={item.name}/>} keyExtractor={item=>item.id} />
+      <FlatList showsVerticalScrollIndicator={false} data={mySkills} renderItem={({item})=><SkillCard onPress={()=>handleremoveSkill(item.id)} skill={item.name}/>} keyExtractor={item=>item.id} />
     </View>
   );
 };
