@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   StyleSheet,
   Text,
@@ -13,25 +13,32 @@ import ButtonAdd from "../components/button";
 const Home = () => {
   const [newSkill, setNewSkill] = useState("");
   const [mySkills, setMySkills] = useState([]);
+  const [greeting, setGreeting] = useState('')
 
   const handleNewAddNewSkill = () => {
     setMySkills((oldSkills) => [...oldSkills, newSkill]);
   };
 
+  useEffect(()=>{
+    const currentHour=new Date().getHours();
+
+    currentHour <12 ? setGreeting('Good Morning') : currentHour >=12 && currentHour <18 ? setGreeting('Good Afternoon') : setGreeting('Good Night');
+
+  },[])
+
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Welcome Marlon</Text>
+      <Text style={style.greeting} >{greeting}</Text>
       <TextInput
         placeholder="New Skill"
         placeholderTextColor="#555"
         style={styles.input}
-        onChangeText={txt=>setNewSkill(txt)}
+        onChangeText={setNewSkill}
       />
       <ButtonAdd action={handleNewAddNewSkill} />
       <Text style={[styles.title, { marginVertical: 50 }]}>My Skills</Text>
-      {/* {mySkills.map((skill) => (
-        <SkillCard key={skill} skill={skill} />
-      ))} */}
+      
       <FlatList data={mySkills} renderItem={({item})=><SkillCard  skill={item}/>} keyExtractor={item=>item} />
     </View>
   );
@@ -60,6 +67,9 @@ const styles = StyleSheet.create({
     marginTop: 30,
     borderRadius: 7,
   },
+  greeting:{
+      color: 'white'
+  }
   
   
 });
