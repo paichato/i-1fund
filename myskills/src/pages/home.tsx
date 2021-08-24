@@ -13,7 +13,8 @@ import SkillCard from "../components/skillCard";
 
 interface SkillData{
   id:string,
-  name:string
+  name:string,
+  date?: Date
 }
 
 
@@ -57,7 +58,7 @@ const Home = () => {
       <ButtonAdd action={handleNewAddNewSkill} />
       <Text style={[styles.title, { marginVertical: 50 }]}>My Skills</Text>
       
-      <FlatList showsVerticalScrollIndicator={false} data={mySkills} renderItem={({item})=><SkillCard  skill={item}/>} keyExtractor={item=>item} />
+      <FlatList showsVerticalScrollIndicator={false} data={mySkills} renderItem={({item})=><SkillCard  skill={item.name}/>} keyExtractor={item=>item.id} />
     </View>
   );
 };
