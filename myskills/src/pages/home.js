@@ -13,8 +13,11 @@ const Home = () => {
             <TouchableOpacity activeOpacity={0.7} style={styles.button}>
                 <Text style={styles.buttonText}>Add</Text>
             </TouchableOpacity>
-            <Text style={[styles.title,{marginTop:50}]} >My Skills</Text>
-            <Text style={styles.skill} >Teste</Text>
+            <Text style={[styles.title,{marginVertical:50}]} >My Skills</Text>
+            <TouchableOpacity style={styles.buttonSkill} >
+            <Text style={styles.textSkill} >Teste</Text>
+            </TouchableOpacity>
+            
         </View>
     )
 }
@@ -55,9 +58,15 @@ const styles = StyleSheet.create({
         fontWeight:'bold',
 
     },
-    skill:{
+    buttonSkill:{
+        backgroundColor:'#1f1e25',
+        padding: 15,
+        borderRadius:50,
+        alignItems:'center',
+    },
+    textSkill:{
         color:'fff',
-        backgroundColor:'1f1e25',
+        backgroundColor:'#1f1e25',
         padding:20,
         fontSize:18,
         fontWeight:'bold'
