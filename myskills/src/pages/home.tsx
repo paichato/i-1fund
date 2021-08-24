@@ -55,7 +55,7 @@ const Home = () => {
         value={newSkill}
       />
       
-      <ButtonAdd onPress={handleNewAddNewSkill} />
+      <ButtonAdd title='Add' onPress={handleNewAddNewSkill} />
       <Text style={[styles.title, { marginVertical: 50 }]}>My Skills</Text>
       
       <FlatList showsVerticalScrollIndicator={false} data={mySkills} renderItem={({item})=><SkillCard  skill={item.name}/>} keyExtractor={item=>item.id} />
