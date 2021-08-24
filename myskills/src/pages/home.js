@@ -1,7 +1,11 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { StyleSheet, Text, View, TextInput, TouchableOpacity } from 'react-native'
 
 const Home = () => {
+
+    const [newSkill, setNewSkill] = useState('');
+    const [mySkills, setMySkills] = useState([]);
+
     return (
         <View style={styles.container}>
             <Text style={styles.title}>Welcome Marlon</Text>
