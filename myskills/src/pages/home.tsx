@@ -32,7 +32,7 @@ const Home = () => {
       name: newSkill
     }
 
-    setMySkills((oldSkills) => [...oldSkills, newSkill]);
+    setMySkills((oldSkills) => [...oldSkills, data]);
   };
 
   useEffect(()=>{
@@ -69,7 +69,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: "#121015",
-    paddingHorizontal: 20,
+   
     paddingVertical: 70,
     paddingHorizontal: 30,
   },
