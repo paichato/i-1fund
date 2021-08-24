@@ -6,9 +6,10 @@ const Home = () => {
         <View style={styles.container}>
             <Text style={styles.title}>Welcome Marlon</Text>
             <TextInput placeholder='New Skill' placeholderTextColor='#555' style={styles.input}/>
-            <TouchableOpacity style={styles.button}>
+            <TouchableOpacity activeOpacity={0.7} style={styles.button}>
                 <Text style={styles.buttonText}></Text>
             </TouchableOpacity>
+            <Text style={[styles.title,{marginTop:50}]} >My Skills</Text>
         </View>
     )
 }
