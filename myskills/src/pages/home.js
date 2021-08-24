@@ -1,11 +1,14 @@
 import React from 'react'
-import { StyleSheet, Text, View, TextInput } from 'react-native'
+import { StyleSheet, Text, View, TextInput, TouchableOpacity } from 'react-native'
 
 const Home = () => {
     return (
         <View style={styles.container}>
             <Text style={styles.title}>Welcome Marlon</Text>
-            <TextInput style={styles.input}/>
+            <TextInput placeholder='New Skill' placeholderTextColor='#555' style={styles.input}/>
+            <TouchableOpacity style={styles.button}>
+                <Text style={styles.buttonText}></Text>
+            </TouchableOpacity>
         </View>
     )
 }
@@ -32,5 +35,18 @@ const styles = StyleSheet.create({
         padding: 15,
         marginTop:30,
         borderRadius:7,
+    },
+    button:{
+        backgroundColor:'#a370f7',
+        padding: 15,
+        borderRadius:7,
+        alignItems:'center',
+        marginTop:20
+    },
+    buttonText:{
+        color: 'fff',
+        fontSize:17,
+        fontWeight:'bold',
+
     }
 })
