@@ -3,12 +3,13 @@ import { View, Text, TouchableOpacity, StyleSheet, TouchableOpacityProps } from 
 
 type ButtonProps=TouchableOpacityProps;
 
-export default function ButtonAdd({onPress}:ButtonProps) {
+export default function ButtonAdd({...rest}:ButtonProps) {
     return (
         <TouchableOpacity
-        onPress={onPress}
+        // onPress={onPress}
         activeOpacity={0.7}
         style={styles.button}
+        {...rest}
       >
         <Text style={styles.buttonText}>Add</Text>
       </TouchableOpacity>
