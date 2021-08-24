@@ -5,7 +5,8 @@ import {
   View,
   TextInput,
   TouchableOpacity,
-  FlatList
+  FlatList,
+  StatusBar
 } from "react-native";
 import ButtonAdd from "../components/button";
 
@@ -28,6 +29,7 @@ const Home = () => {
 
   return (
     <View style={styles.container}>
+       
       <Text style={styles.title}>Welcome Marlon</Text>
       <Text style={style.greeting} >{greeting}</Text>
       <TextInput
