@@ -11,9 +11,10 @@ const Home = () => {
             <Text style={styles.title}>Welcome Marlon</Text>
             <TextInput placeholder='New Skill' placeholderTextColor='#555' style={styles.input}/>
             <TouchableOpacity activeOpacity={0.7} style={styles.button}>
-                <Text style={styles.buttonText}></Text>
+                <Text style={styles.buttonText}>Add</Text>
             </TouchableOpacity>
             <Text style={[styles.title,{marginTop:50}]} >My Skills</Text>
+            <Text style={styles.skill} >Teste</Text>
         </View>
     )
 }
@@ -53,5 +54,12 @@ const styles = StyleSheet.create({
         fontSize:17,
         fontWeight:'bold',
 
+    },
+    skill:{
+        color:'fff',
+        backgroundColor:'1f1e25',
+        padding:20,
+        fontSize:18,
+        fontWeight:'bold'
     }
 })
